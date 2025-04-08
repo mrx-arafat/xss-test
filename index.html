@@ -5,8 +5,335 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>xss</title>
   </head>
-  <body></body>
-  <script>
-    alert(document.domain);
-  </script>
+  <body>
+    <h1>ChatBot Test</h1>
+
+    <div class="betterdocs-cross-domain-code">
+      <div id="betterdocs-ia"></div>
+      <link
+        rel="stylesheet"
+        href="https://chatbottest-fibp.wp1.sh/wp-content/plugins/betterdocs-pro/assets/public/css/instant-answer.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://chatbottest-fibp.wp1.sh/wp-content/plugins/betterdocs-pro/assets/public/css/ai-chatbot.css"
+      />
+      <style type="text/css">
+        .betterdocs-ia-launcher-wrapper .betterdocs-ia-launcher,
+        .betterdocs-ia-common-header,
+        .betterdocs-ia-common-header
+          .betterdocs-ia-search
+          .betterdocs-ia-search-icon,
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-submit
+          button,
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-footer
+          .betterdocs-ia-footer-feedback {
+          background-color: #00b682;
+        }
+        .betterdocs-ia-single-docs-wrapper .betterdocs-ia-singleDoc-header,
+        .betterdocs-ia-tabs .active p {
+          color: #00b682;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-header
+          .content-icon-expand
+          svg
+          path,
+        .betterdocs-ia-docs-content .content-icon svg path,
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-header
+          .content-icon-back
+          svg
+          path {
+          fill: #00b682;
+        }
+        .betterdocs-ia-tabs li.active svg g path,
+        .betterdocs-ia-tabs .betterdocs-ia-chatbot.active .chatbotpath,
+        .top-content .chat-icon .chatbotpath,
+        .message-content .avatar path {
+          fill: #00b682;
+        }
+        .betterdocs-ia-tabs .betterdocs-ia-chatbot.active .chatbotpathstroke,
+        .top-content .chat-icon .chatbotpathstroke {
+          stroke: #00b682;
+        }
+        .chat-container
+          .chat-content-wrapper
+          .chat-footer
+          .message-input
+          button,
+        .chat-container .chat-content-wrapper .chat-body .message.sent .query,
+        .chat-container
+          .chat-content-wrapper
+          .chat-body
+          .message.failed
+          .query {
+          background-color: #00b682;
+        }
+        .betterdocs-ia-launcher-wrapper .betterdocs-ia-launcher:hover {
+          background-color: #00b682;
+        }
+        .betterdocs-ia-common-header .betterdocs-title:not(:last-child) {
+          color: #ffffff;
+        }
+        .betterdocs-ia-common-header h2 {
+          color: #ffffff;
+        }
+        .betterdocs-ia-common-header .betterdocs-info {
+          color: #ffffff;
+        }
+        .betterdocs-ia-docs .betterdocs-ia-docs-heading .doc-title {
+          color: #111213;
+        }
+        .betterdocs-ia-docs .betterdocs-ia-docs-heading {
+          background-color: #ffffff;
+        }
+        .betterdocs-ia-docs-content .content-item h4 {
+          color: #111213;
+        }
+        .betterdocs-ia-docs-content .content-item p {
+          color: #6d7175;
+        }
+        .betterdocs-ia-docs-content {
+          background-color: #ffffff;
+        }
+        .betterdocs-ia-common-header .betterdocs-ia-search,
+        .betterdocs-ia-common-header
+          .betterdocs-ia-search
+          .betterdocs-ia-search-field {
+          background-color: #ffffff;
+        }
+        .betterdocs-ia-common-header
+          .betterdocs-ia-search
+          .betterdocs-ia-search-field::placeholder {
+          color: #1c1c1c;
+        }
+        .betterdocs-ia-common-header
+          .betterdocs-ia-search
+          .betterdocs-ia-search-field {
+          color: #000000;
+        }
+        .betterdocs-ia-common-header
+          .betterdocs-ia-search
+          .betterdocs-ia-search-icon
+          svg {
+          fill: #ffffff;
+        }
+        .betterdocs-ia-tabs {
+          background-color: #ffffff;
+        }
+        .betterdocs-ia-tabs li p {
+          color: #202223;
+        }
+        .betterdocs-ia-tab-message-container
+          .message__header
+          .header__content
+          h4 {
+          color: #ffffff;
+        }
+        .betterdocs-ia-tab-message-container
+          .message__header
+          .header__content
+          p {
+          color: #ffffff;
+        }
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-group
+          .ia-input,
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-group
+          > textarea {
+          background-color: #ffffff;
+        }
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-email-group
+          p,
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-name-group
+          p,
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-subject-group
+          p,
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-message-group
+          p {
+          color: #202223;
+        }
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-attachments-group
+          button {
+          background-color: #ffffff;
+        }
+        .betterdocs-ia-tab-message-container
+          .betterdocs-ia-feedback-form
+          .betterdocs-ia-attachments-group
+          p {
+          color: #6d7175;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-content
+          .doc-title {
+          color: #111213;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-header.on-scroll
+          h2 {
+          color: #111213;
+        }
+        .betterdocs-ia-single-docs-wrapper .betterdocs-ia-singleDoc-header {
+          background-color: #f6f6f7;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-header
+          .content-icon-back,
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-header
+          .content-icon-expand {
+          background-color: #f6f6f7;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-footer
+          .betterdocs-ia-footer-feedback
+          .betterdocs-ia-reaction-group
+          .ia-reaction {
+          background-color: #00a375;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-footer
+          .betterdocs-ia-footer-feedback
+          .betterdocs-ia-reaction-group
+          .ia-reaction
+          .betterdocs-emo {
+          fill: #ffffff;
+        }
+        .betterdocs-ia-single-docs-wrapper
+          .betterdocs-ia-singleDoc-footer
+          .betterdocs-ia-footer-feedback
+          p {
+          color: #fafafa;
+        }
+        .betterdocs-ia-launcher-wrapper {
+          right: 20px;
+        }
+        .betterdocs-ia-main-wrapper {
+          right: 20px;
+        }
+      </style>
+      <script>
+        window.betterdocs = {
+          IA_NONCE: "86b0756116",
+          AJAX_URL:
+            "https:\/\/chatbottest-fibp.wp1.sh\/wp-admin\/admin-ajax.php",
+          SITE_TITLE: "chatbottest-fibp.wp1.sh",
+          BASE_URL: "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/",
+          CHAT: {
+            show: true,
+            label: "Ask",
+            subtitle: "Need a hand? Shoot us a message.",
+            subtitle_two:
+              "We typically respond within 24-48 hours. Your solution is just a message away.",
+          },
+          ANSWER: { label: "Answer", subtitle: "Instant Answer" },
+          URL: "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/wp\/v2\/docs",
+          SEARCH: {
+            show: false,
+            SEARCH_URL:
+              "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/wp\/v2\/docs",
+            SEARCH_PLACEHOLDER: "Search...",
+            OOPS: "Oops...",
+            NOT_FOUND:
+              "We couldn\u2019t find any docs that match your search. Try searching for a new term.",
+          },
+          FEEDBACK: {
+            DISPLAY: true,
+            SUCCESS: "Thanks for the feedback",
+            TEXT: "How did you feel?",
+            URL: "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/betterdocs\/v1\/feedback",
+          },
+          RESPONSE: [],
+          ASKFORM: {
+            NAME: "Name",
+            EMAIL: "Email Address",
+            SUBJECT: "Subject",
+            TEXTAREA: "How can we help?",
+            ATTACHMENT: "Accepts .gif, .jpeg, png, pdf, jpg and .png",
+            SENDING: "Sending",
+            SEND: "Send",
+            FILE_UPLOAD_SWITCH: true,
+          },
+          ASK_URL:
+            "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/betterdocs\/v1\/ask",
+          HOME_FAQ: {
+            FAQ_URL:
+              "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/wp\/v2\/betterdocs_faq?per_page=100",
+            HOME_FAQ_CONTENT_TYPE: "faq-list",
+          },
+          FAQ: {
+            "faq-title": "FAQ",
+            "faq-switch": true,
+            faq_content_type: "faq-list",
+            "faq-terms": [],
+            "faq-list": [],
+            "faq-terms-order": "asc",
+            "faq-terms-order-by": "name",
+            "faq-list-orderby": "id",
+            "faq-list-order": "asc",
+          },
+          DOC_CATEGORY: {
+            "doc-title": "Doc Categories",
+            "doc-terms": [],
+            "doc-category-switch": true,
+            "doc-terms-order": "asc",
+            "doc-terms-order-by": "name",
+            "doc-subcategory-switch": true,
+          },
+          HOME_TAB_TITLE: "Home",
+          HOME_CONTENT: "docs",
+          HOME_CONTENT_DOC_CATEGORY_TITLE: "Doc Categories",
+          HOME_CONTENT_DOCS_TITLE: "Docs",
+          HOME_TITLE: "Get Instant Help",
+          HOME_SUBTITLE:
+            "Need any assistance? Get quick solutions to any problems you face.",
+          RESOURCES_TITLE: "Resources",
+          RESOURCES_TAB_TITLE: "Resources",
+          HEADER_ICON: [],
+          HEADER_LOGO: [],
+          TAB_HOME_ICON: [],
+          TAB_MESSAGE_ICON: [],
+          TAB_RESOURCE_ICON: [],
+          TAB_AI_CHATBOT: true,
+          CHATBOT_LICENSE: "valid",
+          PRO_LICENSE: "valid",
+          PRO_ACTIVE: true,
+          CHATBOT_ACTIVE: true,
+          BRANDING: { show: true },
+          THANKS: {
+            title: "Thanks",
+            text: "Your Message Has Been Sent Successfully",
+          },
+        };
+      </script>
+      <script>
+        window.betterdocsAIChatbot = {
+          rest_url: "https:\/\/chatbottest-fibp.wp1.sh\/wp-json\/",
+          title: "We typically reply in a few minutes",
+          subtitle:
+            "We help your business grow by connecting you to your customers.",
+          welcome_message:
+            "Hi, welcome to BetterDocs \ud83d\udc4b You\u2019re speaking with AI Agent - I\u2019m here to answer your questions & help you out.",
+        };
+      </script>
+      <script src="https://chatbottest-fibp.wp1.sh/wp-content/plugins/betterdocs-pro/assets/public/js/instant-answer-cd.js"></script>
+    </div>
+  </body>
 </html>
